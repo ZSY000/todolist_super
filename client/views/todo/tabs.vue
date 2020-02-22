@@ -3,10 +3,10 @@
     <span class="left">{{unFinishedTodoLength}} items left</span>
     <span class="tabs">
       <span
-        v-for="state in states"
-        :key="state"
-        :class="[state, filter === state ? 'actived' : '']"
-        @click="toggleFilter(state)"
+        v-for= "state in states"
+        :key= "state"
+        :class= "[state, filter === state ? 'actived' : '']"
+        @click= "toggleFilter(state)"
       >
         {{state}}
       </span>
@@ -20,28 +20,28 @@ export default {
   props: {
     filter: {
       type: String,
-      required: true,
+      required: true
     },
     todos: {
       type: Array,
-      required: true,
+      required: true
     }
   },
-  data() {
+  data () {
     return {
       states: ['all', 'active', 'completed']
     }
   },
   computed: {
-    unFinishedTodoLength() {
+    unFinishedTodoLength () {
       return this.todos.filter(todo => !todo.completed).length
     }
   },
   methods: {
-    clearAllCompleted() {
+    clearAllCompleted () {
       this.$emit('clearAllCompleted')
     },
-    toggleFilter(state) {
+    toggleFilter (state) {
       this.$emit('toggle', state)
     }
   }
@@ -89,5 +89,3 @@ export default {
   }
 }
 </style>
-
-

@@ -1,5 +1,6 @@
 // 公共配置
 const path = require('path')
+const createVueLoaderOtions = require('./vue-loader.config')
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -13,8 +14,15 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(vue|js|jsx)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre' // 预处理：在处理vue/js/jsx之前先用eslint-loader处理
+      },
+      {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: createVueLoaderOtions(isDev)
       },
       {
         test: /\.jsx$/,

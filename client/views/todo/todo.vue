@@ -5,13 +5,13 @@
       class="add-input"
       autofocus="autofocus"
       placeholder="接下去要做什么？"
-      @keyup.enter="addTodo"
+      @keyup.enter= "addTodo"
     >
     <item
-      :todo="todo"
-      v-for="todo in filteredTodos"
-      :key="todo.id"
-      @del="deleteTodo"
+      :todo= "todo"
+      v-for= "todo in filteredTodos"
+      :key= "todo.id"
+      @del= "deleteTodo"
     />
     <tabs
       :filter="filter"
@@ -27,7 +27,7 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
-  data() {
+  data () {
     return {
       todos: [],
       filter: 'all'
@@ -35,10 +35,10 @@ export default {
   },
   components: {
     Item,
-    Tabs,
+    Tabs
   },
   computed: {
-    filteredTodos() {
+    filteredTodos () {
       if (this.filter === 'all') {
         return this.todos
       }
@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-    addTodo(e) {
+    addTodo (e) {
       this.todos.unshift({
         id: id++,
         content: e.target.value.trim(),
@@ -55,13 +55,13 @@ export default {
       })
       e.target.value = ''
     },
-    deleteTodo(id) {
+    deleteTodo (id) {
       this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1)
     },
-    toggleFilter(state) {
+    toggleFilter (state) {
       this.filter = state
     },
-    clearAllCompleted() {
+    clearAllCompleted () {
       this.todos = this.todos.filter(todo => !todo.completed)
     }
   }
@@ -95,5 +95,3 @@ export default {
   box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
 }
 </style>
-
-

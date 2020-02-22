@@ -1,0 +1,17 @@
+# 安装EditorConfig for VS Code
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+
+# tab为2格
+indent_size = 2
+
+indent_style = space
+
+# 结束位置插入空行
+insert_final_newline = true
+
+# 清除行尾空格
+trim_trailing_whitespace = true
