@@ -4,6 +4,9 @@
     "html"
   ],
   "parser": "babel-eslint",
+  "rules": {
+    "no-new": "off" // 允许new
+  },
 
 // 按照视频配置会出错，用vue-eslint-parser检测
   "parserOptions": {
