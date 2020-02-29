@@ -15,7 +15,7 @@ new Vue({
   `,
   computed: {
     // 作为方法
-    name () {
+    name () { // 相当于调用了属性name的getter方法
       return this.firstname + this.lastname
     },
     fullname () {

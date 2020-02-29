@@ -19,6 +19,8 @@
       @toggle="toggleFilter"
       @clearAllCompleted="clearAllCompleted"
     />
+    <!-- 子路由 -->
+    <!-- <router-view></router-view> -->
   </section>
 </template>
 
@@ -27,6 +29,11 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  // props: ['num'], // num为路由中传入的num
+  mounted () {
+    // console.log(this.$route) // $route包含路由相关信息
+    // console.log(this.num)
+  },
   data () {
     return {
       todos: [],

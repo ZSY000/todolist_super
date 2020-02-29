@@ -1,16 +1,16 @@
 {
-  "extends": "standard",
+  "extends": ["standard", "eslint:recommended"],
   "plugins": [
     "html"
   ],
-  "parser": "babel-eslint",
   "rules": {
     "no-new": "off" // 允许new
   },
 
-// 按照视频配置会出错，用vue-eslint-parser检测
+  // 按照视频配置会出错，用vue-eslint-parser检测
+  "parser": "vue-eslint-parser",
   "parserOptions": {
-    "parser": "vue-eslint-parser"
+
   },
   "env": {
     "browser": true,
