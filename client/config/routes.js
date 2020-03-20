@@ -28,7 +28,7 @@ export default [
     // 钩子函数，进入路由前调用
     beforeEnter: (to, from, next) => {
       next()
-      console.log('11')
+      // console.log('11')
     }
   },
   {

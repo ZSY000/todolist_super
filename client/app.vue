@@ -3,7 +3,7 @@
     <div id="cover"></div>
     <Header></Header>
     <P>{{fullName}} {{counter}}</P>
-    <p>{{num}}</p>
+    <!-- <p>{{num}}</p> -->
     <!-- <p>{{text}} {{textPlus}}</p> -->
     <!-- <todo></todo> -->
     <!-- 跳转到指定名称的路由 -->
@@ -30,6 +30,10 @@ import { // 便于在组件内部使用数据
 } from 'vuex'
 
 export default {
+  // vue-meta声明页面元信息
+  metaInfo: {
+    title: 'The Todo App'
+  },
   components: {
     Header,
     Footer

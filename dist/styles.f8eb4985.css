@@ -1,0 +1,32 @@
+#app[data-v-493c1b44],#cover[data-v-493c1b44]{position:absolute;left:0;right:0;top:0;bottom:0}#cover[data-v-493c1b44]{background-color:#999;opacity:.9;z-index:-1}._2AE8s_0[data-v-dc240dec]{text-align:center}._2AE8s_0 h1[data-v-dc240dec]{font-size:100px;color:rgba(175,47,47,.4);font-weight:100;margin:20px}#footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url(http://127.0.0.1:8000/public/resources/client/assets/images/bg-55db3d93.jpeg);
+  background-size: cover;
+  background-position: center;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  font-smoothing: antialiased;
+  font-weight: 300;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}

@@ -28,7 +28,7 @@ store.registerModule('c', {
 
 // 第一个参数相当于getters方法，这个方法的返回值，发生变化时执行第二个参数函数
 store.watch((state) => state.count === 4, () => {
-  console.log('count === 4')
+  // console.log('count === 4')
 })
 
 // 监测mutations
@@ -39,7 +39,7 @@ store.subscribe((mutations, state) => {
 
 // 监测actions
 store.subscribeAction((action, state) => {
-  console.log('actions变了')
+  // console.log('actions变了')
 })
 
 router.beforeEach((to, from, next) => {

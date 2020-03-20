@@ -16,7 +16,7 @@ export default () => {
     // 自定义插件，按顺序执行，存储的是方法
     plugins: [
       (store) => {
-        console.log('plugins')
+        // console.log('plugins')
       }
     ]
     // modules: { // 模块

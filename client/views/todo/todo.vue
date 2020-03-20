@@ -29,6 +29,9 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  metaInfo: {
+    title: 'Todo page'
+  },
   // props: ['num'], // num为路由中传入的num
   mounted () {
     // console.log(this.$route) // $route包含路由相关信息
